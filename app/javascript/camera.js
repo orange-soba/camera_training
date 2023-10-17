@@ -4,6 +4,10 @@ function camera () {
   const shutter = document.getElementById('shutter');
   const se = document.getElementById('se');
 
+  if (!video) {
+    return null;
+  }
+
   // カメラ設定
   const constrains = {
     audio: false,
