@@ -2,6 +2,7 @@ function camera () {
   const video = document.getElementById('camera');
   const canvas = document.getElementById('picture');
   const shutter = document.getElementById('shutter');
+  const se = document.getElementById('se');
 
   // カメラ設定
   const constrains = {
@@ -32,6 +33,7 @@ function camera () {
 
     // 演出
     video.pause();
+    se.play();
     // 0.5秒後にカメラを再起動
     setTimeout( () => {
       video.play();

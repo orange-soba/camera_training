@@ -2,8 +2,12 @@
 
 <video id="camera"></video>
 <canvas id="picture"></canvas>
-<form>
+<div class="button">
   <button type="button" id="shutter">シャッター</button>
-</form>
+</div>
+
+<audio id="se" preload="auto">
+  <source src="<%= asset_path('camera_shutter_sound.mp3') %>" type="audio/mp3">
+</audio>
 
 <%= link_to '戻る', root_path %>
