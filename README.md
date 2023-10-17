@@ -1,24 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### カメラでの撮影をアプリ内で行うためのトレーニングです
+### オリジナルアプリを作る際にその機能を取り入れる予定で、本番環境等でも機能するか等を確かめるためのモノです
