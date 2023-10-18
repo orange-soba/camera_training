@@ -43,8 +43,24 @@ function camera () {
       video.play();
     }, 500);
 
-    // canvasに画像を貼り付ける
+    // canvasに画像を貼り付ける(プレビューとして表示)
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  });
+
+  postData(canvas);
+};
+
+function postData (canvas) {
+  const form = document.getElementById('form');
+  const imageDataURL = canvas.toDataURL('image/png');
+  form.addEventListener('submit', () => {
+    const formData = new FormData(form);
+    formData.append('image', imageDataURL);
+
+    const XHR = new XMLHttpRequest();
+    XHR.open('Post', '/cameras', true);
+    XHR.responseType = 'json';
+    XHR.send(formData);
   });
 };
 

@@ -1,7 +1,7 @@
 <h1>HTMLカメラ</h1>
 
 <div>
-  <%= form_with model: @camera, url: cameras_path, local: true do |f| %>
+  <%= form_with model: @camera, url: cameras_path, id="form", local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
