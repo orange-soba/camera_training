@@ -1,13 +1,25 @@
 <h1>HTMLカメラ</h1>
 
-<video id="camera"></video>
-<canvas id="picture"></canvas>
-<div class="button">
-  <button type="button" id="shutter">シャッター</button>
-</div>
+<div>
+  <%= form_with model: @camera, url: cameras_path, local: true do |f| %>
 
-<audio id="se" preload="auto">
-  <source src="<%= asset_path('camera_shutter_sound.mp3') %>" type="audio/mp3">
-</audio>
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%= f.label :text %>: 
+    <%= f.text_field :text %><br>
+    <div class="camera-area">
+      <video id="camera"></video>
+      <canvas id="picture"></canvas>
+      <div class="button">
+        <button type="button" id="shutter">シャッター</button>
+      </div><br>
+
+      <audio id="se" preload="auto">
+        <source src="<%= asset_path('camera_shutter_sound.mp3') %>" type="audio/mp3">
+      </audio>
+    </div>
+    <%= f.submit "送信" %><br>
+  <% end %>
+</div>
 
 <%= link_to '戻る', root_path %>

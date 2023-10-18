@@ -1,3 +1,16 @@
-<h1>Home</h1>
+<h1>Home</h1><br>
+<% @cameras.each do |camera| %>
+  <div>
+    <div>
+      <%= camera.text %>
+    </div>
+    <div>
+      <%= camera.image %>
+    </div>
+  </div>
+  <br><br>
+<% end %>
+
+<br>
 
 <%= link_to 'カメラ撮影', new_camera_path %>
